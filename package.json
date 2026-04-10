@@ -1,0 +1,9 @@
+{
+  "name": "army-of-darkness-defense-clone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Army of Darkness style browser defense game",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

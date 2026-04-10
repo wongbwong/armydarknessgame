@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Army of Darkness: Defense Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="game-shell">
+        <canvas id="game" width="1280" height="720" aria-label="Army of Darkness style defense game"></canvas>
+
+        <section class="hud" aria-live="polite">
+          <div class="hud-row">
+            <div class="stat">
+              <span>Iron</span>
+              <strong id="iron-value">0</strong>
+            </div>
+            <div class="stat">
+              <span>Gold</span>
+              <strong id="gold-value">0</strong>
+            </div>
+            <div class="stat">
+              <span>Wave</span>
+              <strong id="wave-value">1</strong>
+            </div>
+            <div class="stat">
+              <span>Enemies</span>
+              <strong id="enemies-value">0</strong>
+            </div>
+          </div>
+          <div class="bars">
+            <label>Necronomicon</label>
+            <div class="bar-wrap">
+              <div class="bar-fill" id="book-bar"></div>
+            </div>
+            <label>Ash</label>
+            <div class="bar-wrap">
+              <div class="bar-fill ash" id="ash-bar"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="controls" id="controls">
+          <button class="action" id="btn-militia" data-action="summon" data-unit="militia">
+            <span class="name">Militia</span>
+            <span class="meta"></span>
+          </button>
+          <button class="action" id="btn-archer" data-action="summon" data-unit="archer">
+            <span class="name">Archer</span>
+            <span class="meta"></span>
+          </button>
+          <button class="action" id="btn-knight" data-action="summon" data-unit="knight">
+            <span class="name">Knight</span>
+            <span class="meta"></span>
+          </button>
+          <button class="action special" id="btn-boomstick" data-action="boomstick">
+            <span class="name">Boomstick Blast</span>
+            <span class="meta"></span>
+          </button>
+          <button class="action special" id="btn-fortify" data-action="fortify">
+            <span class="name">Fortify Book</span>
+            <span class="meta"></span>
+          </button>
+        </section>
+
+        <section class="movement" id="movement">
+          <button class="move-btn" id="move-left" data-move="left" aria-label="Move left">◀</button>
+          <button class="move-btn" id="move-right" data-move="right" aria-label="Move right">▶</button>
+        </section>
+
+        <section class="overlay visible" id="overlay">
+          <div class="panel">
+            <h1 id="overlay-title">Army of Darkness Defense</h1>
+            <p id="overlay-subtitle">
+              Hold the line, summon fighters, and keep the Necronomicon alive until dawn.
+            </p>
+            <button id="overlay-button">Start Defense</button>
+          </div>
+        </section>
+
+        <section class="intermission-screen" id="intermission-screen">
+          <div class="intermission-frame">
+            <div class="intermission-top">
+              <h2 id="intermission-wave">Wave 1</h2>
+              <h1>UPGRADES</h1>
+              <button class="menu-btn">MENU</button>
+            </div>
+
+            <div class="intermission-body">
+              <aside class="left-nav">
+                <button class="nav-item">Ash</button>
+                <button class="nav-item">Troops</button>
+                <button class="nav-item active">Castle</button>
+              </aside>
+
+              <section class="upgrade-board">
+                <div class="upgrade-list" id="upgrade-list"></div>
+              </section>
+            </div>
+
+            <div class="intermission-bottom">
+              <div class="gold-box">
+                <span class="coin">◎</span>
+                <strong id="intermission-gold">0</strong>
+              </div>
+              <button class="buy-coins-btn">Buy Coins</button>
+              <button class="continue-btn" id="intermission-continue">continue</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
