@@ -10,21 +10,23 @@ This project recreates the feel of the classic mobile *Army of Darkness Defense*
   - Move Ash left and right (touch pad or `A/D` and arrow keys)
   - Side-scrolling battlefield camera that follows Ash
   - Summon `Militia`, `Archer`, and `Knight` units
-  - Fight escalating undead waves
+  - Fight and fully clear each wave to progress
+  - **Iron** is the combat currency for units/abilities and resets every wave
+  - **Gold** is earned alongside iron at a lower rate and persists between waves
 - Procedural sprite-sheet animation system:
   - Frame-based animated actors for Ash, allies, and enemies
   - Retro pixel-art style rendered through canvas sprite atlases
 - Synthesized sound effects (Web Audio API):
-  - Summons, attacks, abilities, shop purchases, and victory/defeat cues
+  - Summons, attacks, abilities, upgrade purchases, and victory/defeat cues
   - Audio starts after first user interaction (browser autoplay policy)
 - Hero abilities:
   - `Boomstick Blast` (frontline burst damage)
   - `Fortify Book` (heal + temporary shield)
-- Between-wave shop and upgrade tree:
-  - Shop breaks open during the run
-  - Buy persistent run upgrades (unit damage/HP/range, economy, Ash power, ability buffs, book durability)
-  - Upgrade levels and scaling costs
-- Win condition: survive until dawn (`3:30`)
+- Between-wave castle upgrade screen:
+  - After every wave clear, you enter a dedicated upgrade screen
+  - Spend gold on `Necronomicon`, `Wall Archers`, `Wall Catapults`, `Smithy`, and `Treasury`
+  - Upgrade levels and scaling costs are persistent during the run
+- Win condition: clear all waves
 - Lose condition: Ash or the Necronomicon is destroyed
 
 ## Run it
