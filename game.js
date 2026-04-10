@@ -86,6 +86,7 @@
       ranged: false,
     },
   };
+  
 
   const ENEMY_DEFS = {
     skeleton: {
